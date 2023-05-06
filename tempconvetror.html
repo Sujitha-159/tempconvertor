@@ -1,0 +1,32 @@
+<html>
+<head>
+<style>
+body{
+background-image:url("https://img.freepik.com/free-vector/soft-blue-watercolor-texture-design-background_1055-15955.jpg");
+background-repeat:fixed;
+background-size:cover;
+}
+</style>
+</head>
+<body>
+<h1 align="center">TEMPERATURE CONVERTER</h1>
+<p align="center">
+<font size="20" color="black">
+<label>CELCIUS:</label>
+<input id="input celcius"type="number"
+ oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)"style="height: 40px;width:300px;">
+</p>
+<p align="center"><label>FARENHEIT:</label><span id="farenheit"></span></p>
+
+<p align="center"><label for="lname">KELVIN:</label><span id="kelvin"></span></p>
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("farenheit").innerHTML=((9*valNum)/5)+32;
+document.getElementById("\n");
+document.getElementById("kelvin").innerHTML=valNum+273.15;
+}
+</script>
+
+</body>
+</html>
